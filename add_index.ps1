@@ -42,7 +42,7 @@ for ($i = 1; $i -lt $lines.Count; $i++) {
 }
 
 # 出力
-[System.IO.File]::WriteAllLines($OutputFile, $result, [System.Text.Encoding]::UTF8)
+$result | Set-Content $OutputFile -Encoding UTF8
 
 # 出力成功を確認してから元ファイルを削除
 if ($?) {
